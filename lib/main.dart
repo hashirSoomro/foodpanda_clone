@@ -776,7 +776,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Expanded(
                   child: Padding(
@@ -785,11 +785,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: 7,
                       itemBuilder: ((context, index) {
-                        return GestureDetector(
-                          onTap: () {},
-                          child: Column(
-                            children: [
-                              Column(
+                        return Column(
+                          children: [
+                            InkWell(
+                              onTap: () {},
+                              child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -816,18 +816,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                       cuisines[index],
                                       style: GoogleFonts.poppins(
                                         textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w600,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           height: 1.2,
                                         ),
                                       ),
                                     ),
                                   ]),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Column(
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -854,16 +857,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                       cuisines[index + 7],
                                       style: GoogleFonts.poppins(
                                         textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w600,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           height: 1.2,
                                         ),
                                       ),
                                     ),
                                   ]),
-                            ],
-                          ),
+                            ),
+                          ],
                         );
                       }),
                     ),
@@ -889,16 +892,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 6.0),
+                    padding: const EdgeInsets.only(left: 2.0),
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 3,
                       itemBuilder: ((context, index) {
-                        return GestureDetector(
+                        return InkWell(
                           onTap: () {},
                           child: Column(
                             children: [
@@ -908,7 +911,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   children: [
                                     Container(
                                       margin: const EdgeInsets.only(
-                                          left: 6, right: 6),
+                                          left: 10, right: 10),
                                       height: 70,
                                       width: 70,
                                       decoration: BoxDecoration(
@@ -928,12 +931,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       shops[index],
                                       style: GoogleFonts.poppins(
                                         textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w600,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           height: 1.2,
                                         ),
                                       ),
+                                      textAlign: TextAlign.center,
                                     ),
                                   ]),
                               SizedBox(
