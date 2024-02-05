@@ -31,6 +31,44 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List cuisineImages = [
+    "assets/images/pizza.jfif",
+    "assets/images/burgers.jfif",
+    "assets/images/shawarma.jfif",
+    "assets/images/FastFood.jfif",
+    "assets/images/parathas.jfif",
+    "assets/images/broast.jfif",
+    "assets/images/bbq.jfif",
+    "assets/images/biryani.jfif",
+    "assets/images/ice cream.jfif",
+    "assets/images/pasta.jfif",
+    "assets/images/chinese.jfif",
+    "assets/images/samosa.jfif",
+    "assets/images/pulao.jfif",
+    "assets/images/nihari.jfif",
+  ];
+  List cuisines = [
+    "Pizza",
+    "Burgers",
+    "Shawarma",
+    "Fast Food",
+    "Paratha",
+    "Broast",
+    "BBQ",
+    "Biryani",
+    "Ice Cream",
+    "Pasta",
+    "Chinese",
+    "Samosa",
+    "Pulao",
+    "Nihari"
+  ];
+  List shopsImages = [
+    "assets/images/be.png",
+    "assets/images/rahima.jfif",
+    "assets/images/pandamart-johar.jfif"
+  ];
+  List shops = ["Be Mart", "Rahima General\nStore", "Pandamart -\nJohar"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -737,30 +775,169 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding: const EdgeInsets.only(left: 6.0),
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: 30,
+                      itemCount: 7,
                       itemBuilder: ((context, index) {
                         return GestureDetector(
                           onTap: () {},
                           child: Column(
                             children: [
-                              Container(
-                                margin: const EdgeInsets.only(right: 12),
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/pizza.jfif"),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: Colors.transparent),
-                                ),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 6, right: 6),
+                                      height: 70,
+                                      width: 70,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image:
+                                              AssetImage(cuisineImages[index]),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                            color: Colors.transparent),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      cuisines[index],
+                                      style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.black,
+                                          height: 1.2,
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 6, right: 6),
+                                      height: 70,
+                                      width: 70,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              cuisineImages[index + 7]),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                            color: Colors.transparent),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      cuisines[index + 7],
+                                      style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.black,
+                                          height: 1.2,
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Popular shops",
+                        style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                            height: 1.2,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 6.0),
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 3,
+                      itemBuilder: ((context, index) {
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Column(
+                            children: [
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(
+                                          left: 6, right: 6),
+                                      height: 70,
+                                      width: 70,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(shopsImages[index]),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                            color: Colors.transparent),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      shops[index],
+                                      style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.black,
+                                          height: 1.2,
+                                        ),
+                                      ),
+                                    ),
+                                  ]),
+                              SizedBox(
+                                height: 20,
                               ),
                             ],
                           ),
@@ -768,7 +945,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                     ),
                   ),
-                )
+                ),
               ]),
         ),
       ),
