@@ -122,7 +122,110 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(color: myColour[500]),
-              child: Text("Hashir"),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: Center(
+                      child: Text(
+                        "H",
+                        style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: myColour,
+                            height: 1.2,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 65,
+                  ),
+                  Text(
+                    "Hashir Soomro",
+                    style: GoogleFonts.poppins(
+                      textStyle: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        height: 1.2,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 12, right: 12, bottom: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset(
+                            "assets/images/pandapay.jpg",
+                            height: 20,
+                            width: 70,
+                          ),
+                          Container(
+                            height: 20,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                color: primaryAccent[200],
+                                shape: BoxShape.rectangle,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Center(
+                              child: Text(
+                                "Rs. 0.00",
+                                style: GoogleFonts.poppins(
+                                  textStyle: const TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w600,
+                                    color: myColour,
+                                    height: 1.2,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "Top up, check your balance and get exciting\noffers!",
+                        style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black,
+                            height: 1.2,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+              thickness: 0.1,
             ),
             ListTile(
               title: Text("Become a pandapro"),
@@ -934,6 +1037,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 10,
                                           fontWeight: FontWeight.w500,
                                           color: Colors.black,
+                                          height: 1.2,
+                                        ),
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      "35 mins",
+                                      style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey,
                                           height: 1.2,
                                         ),
                                       ),
