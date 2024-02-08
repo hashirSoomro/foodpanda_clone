@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:foodpanda_clone/HeadingsText.dart';
 import 'package:foodpanda_clone/circleIcon.dart';
+import 'package:foodpanda_clone/cuisineList.dart';
 import 'package:foodpanda_clone/drawerTile.dart';
 import 'package:foodpanda_clone/foodDeliveryCard.dart';
 import 'package:foodpanda_clone/otherHomeCard.dart';
 import 'package:foodpanda_clone/pandaMartCard.dart';
+import 'package:foodpanda_clone/restaurantSlider.dart';
 import 'package:foodpanda_clone/searchField.dart';
+import 'package:foodpanda_clone/shopsList.dart';
 import 'package:foodpanda_clone/textTile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:foodpanda_clone/colors.dart';
@@ -38,44 +41,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List cuisineImages = [
-    "assets/images/pizza.jfif",
-    "assets/images/burgers.jfif",
-    "assets/images/shawarma.jfif",
-    "assets/images/FastFood.jfif",
-    "assets/images/parathas.jfif",
-    "assets/images/broast.jfif",
-    "assets/images/bbq.jfif",
-    "assets/images/biryani.jfif",
-    "assets/images/ice cream.jfif",
-    "assets/images/pasta.jfif",
-    "assets/images/chinese.jfif",
-    "assets/images/samosa.jfif",
-    "assets/images/pulao.jfif",
-    "assets/images/nihari.jfif",
-  ];
-  List cuisines = [
-    "Pizza",
-    "Burgers",
-    "Shawarma",
-    "Fast Food",
-    "Paratha",
-    "Broast",
-    "BBQ",
-    "Biryani",
-    "Ice Cream",
-    "Pasta",
-    "Chinese",
-    "Samosa",
-    "Pulao",
-    "Nihari"
-  ];
-  List shopsImages = [
-    "assets/images/be.png",
-    "assets/images/rahima.jfif",
-    "assets/images/pandamart-johar.jfif"
-  ];
-  List shops = ["Be Mart", "Rahima General\nStore", "Pandamart -\nJohar"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -376,161 +341,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 30,
                     itemBuilder: ((context, index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        height: 150,
-                        margin: const EdgeInsets.only(right: 12),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(10),
-                          onTap: () {},
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 104,
-                                width: 210,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/burger.jpg"),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: Colors.transparent),
-                                ),
-                              ),
-                              Container(
-                                height: 55,
-                                width: 210,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 9,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          "KFC - Mega Mall",
-                                          style: GoogleFonts.poppins(
-                                            textStyle: const TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.black,
-                                              height: 1.2,
-                                            ),
-                                          ),
-                                        ),
-                                        Spacer(),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          children: [
-                                            Image(
-                                              image: AssetImage(
-                                                  "assets/icons/star.png"),
-                                              height: 10,
-                                              width: 10,
-                                            ),
-                                            SizedBox(
-                                              width: 4,
-                                            ),
-                                            Text(
-                                              "4.4",
-                                              style: GoogleFonts.poppins(
-                                                textStyle: const TextStyle(
-                                                  fontSize: 10,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Colors.black,
-                                                  height: 1.2,
-                                                ),
-                                              ),
-                                            ),
-                                            Text(
-                                              "(5000+)",
-                                              style: GoogleFonts.poppins(
-                                                textStyle: const TextStyle(
-                                                  fontSize: 10,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Colors.grey,
-                                                  height: 1.2,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "\$\$ . PKR 249 minimum . Fast Food",
-                                          style: GoogleFonts.poppins(
-                                            textStyle: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.grey,
-                                              height: 1.2,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 3,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Image(
-                                          image: AssetImage(
-                                              "assets/icons/clock.png"),
-                                          height: 10,
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          " 20 min . ",
-                                          style: GoogleFonts.poppins(
-                                            textStyle: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.grey,
-                                              height: 1.2,
-                                            ),
-                                          ),
-                                        ),
-                                        Image(
-                                          image: AssetImage(
-                                              "assets/icons/bike.png"),
-                                          height: 10,
-                                          width: 10,
-                                        ),
-                                        Text(
-                                          " 50 PKR",
-                                          style: GoogleFonts.poppins(
-                                            textStyle: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.grey,
-                                              height: 1.2,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      );
+                      return RestaurantSlider();
                     }),
                   ),
                 )),
@@ -540,100 +351,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 6.0),
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 7,
-                      itemBuilder: ((context, index) {
-                        return Column(
-                          children: [
-                            InkWell(
-                              onTap: () {},
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 6, right: 6),
-                                      height: 70,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image:
-                                              AssetImage(cuisineImages[index]),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                            color: Colors.transparent),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
-                                    Text(
-                                      cuisines[index],
-                                      style: GoogleFonts.poppins(
-                                        textStyle: const TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black,
-                                          height: 1.2,
-                                        ),
-                                      ),
-                                    ),
-                                  ]),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            InkWell(
-                              onTap: () {},
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 6, right: 6),
-                                      height: 70,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                              cuisineImages[index + 7]),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                            color: Colors.transparent),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
-                                    Text(
-                                      cuisines[index + 7],
-                                      style: GoogleFonts.poppins(
-                                        textStyle: const TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black,
-                                          height: 1.2,
-                                        ),
-                                      ),
-                                    ),
-                                  ]),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            )
-                          ],
-                        );
-                      }),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(left: 6.0),
+                      child: CuisineList()),
                 ),
                 HeadingsText(text: "Popular shops"),
                 SizedBox(
@@ -641,72 +360,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 3,
-                      itemBuilder: ((context, index) {
-                        return InkWell(
-                          onTap: () {},
-                          child: Column(
-                            children: [
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 10, right: 10),
-                                      height: 70,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(shopsImages[index]),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                            color: Colors.transparent),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
-                                    Text(
-                                      shops[index],
-                                      style: GoogleFonts.poppins(
-                                        textStyle: const TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black,
-                                          height: 1.2,
-                                        ),
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
-                                    Text(
-                                      "35 mins",
-                                      style: GoogleFonts.poppins(
-                                        textStyle: const TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.grey,
-                                          height: 1.2,
-                                        ),
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  ]),
-                            ],
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
+                      padding:
+                          const EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
+                      child: ShopsList()),
                 ),
                 HeadingsText(text: "Pick up at a restaurant near you"),
                 ColorFiltered(
