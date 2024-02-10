@@ -31,7 +31,7 @@ class _FoodDeliveryCardState extends State<FoodDeliveryCard> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -45,7 +45,7 @@ class _FoodDeliveryCardState extends State<FoodDeliveryCard> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Image.asset("assets/images/biryani.jpg",

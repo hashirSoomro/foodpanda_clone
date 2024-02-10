@@ -42,7 +42,7 @@ class _ShopsListState extends State<ShopsList> {
                         border: Border.all(color: Colors.transparent),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -57,7 +57,7 @@ class _ShopsListState extends State<ShopsList> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(

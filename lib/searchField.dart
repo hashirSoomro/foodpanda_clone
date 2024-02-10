@@ -20,7 +20,7 @@ class _SearchFieldState extends State<SearchField> {
           prefixIcon:
               CircleIcon(img: "assets/icons/search.png", onPressed: () {}),
           prefixIconColor: Colors.black,
-          prefixIconConstraints: BoxConstraints(),
+          prefixIconConstraints: const BoxConstraints(),
           focusColor: Colors.white,
           filled: true,
           fillColor: Colors.white,

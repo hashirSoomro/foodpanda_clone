@@ -33,7 +33,7 @@ class _drawerTileState extends State<drawerTile> {
                 width: widget.width,
                 height: widget.height,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30,
               ),
               Text(

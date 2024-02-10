@@ -26,7 +26,7 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
               height: 104,
               width: 210,
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/images/burger.jpg"),
                   fit: BoxFit.cover,
                 ),
@@ -34,12 +34,12 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                 border: Border.all(color: Colors.transparent),
               ),
             ),
-            Container(
+            SizedBox(
               height: 55,
               width: 210,
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 9,
                   ),
                   Row(
@@ -56,16 +56,16 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage("assets/icons/star.png"),
                             height: 10,
                             width: 10,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 4,
                           ),
                           Text(
@@ -94,7 +94,7 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 4,
                   ),
                   Row(
@@ -113,12 +113,12 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Row(
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage("assets/icons/clock.png"),
                         height: 10,
                         width: 10,
@@ -134,7 +134,7 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                           ),
                         ),
                       ),
-                      Image(
+                      const Image(
                         image: AssetImage("assets/icons/bike.png"),
                         height: 10,
                         width: 10,

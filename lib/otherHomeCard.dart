@@ -41,7 +41,7 @@ class _OtherHomeCardState extends State<OtherHomeCard> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(
@@ -57,7 +57,7 @@ class _OtherHomeCardState extends State<OtherHomeCard> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Image.asset(widget.image, width: 40, height: 35)

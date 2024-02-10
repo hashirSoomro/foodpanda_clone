@@ -68,7 +68,7 @@ class _CuisineListState extends State<CuisineList> {
                         border: Border.all(color: Colors.transparent),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -84,7 +84,7 @@ class _CuisineListState extends State<CuisineList> {
                     ),
                   ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             InkWell(
@@ -106,7 +106,7 @@ class _CuisineListState extends State<CuisineList> {
                         border: Border.all(color: Colors.transparent),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -122,7 +122,7 @@ class _CuisineListState extends State<CuisineList> {
                     ),
                   ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             )
           ],

@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               "Shangrilla Tower B1/103",
               style: GoogleFonts.poppins(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -88,301 +88,307 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: Drawer(
         surfaceTintColor: Colors.white,
         shadowColor: Colors.white,
-        shape: BeveledRectangleBorder(),
+        shape: const BeveledRectangleBorder(),
         backgroundColor: Colors.white,
-        child: ListView(
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(color: myColour[500]),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    height: 35,
-                    width: 35,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.white),
-                    child: Center(
-                      child: Text(
-                        "H",
-                        style: GoogleFonts.poppins(
-                          textStyle: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: myColour,
-                            height: 1.2,
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+          child: ListView(
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(color: myColour[500]),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 35,
+                      width: 35,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.white),
+                      child: Center(
+                        child: Text(
+                          "H",
+                          style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: myColour,
+                              height: 1.2,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 65,
-                  ),
-                  Text(
-                    "Hashir Soomro",
-                    style: GoogleFonts.poppins(
-                      textStyle: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                        height: 1.2,
+                    const SizedBox(
+                      height: 65,
+                    ),
+                    Text(
+                      "Hashir Soomro",
+                      style: GoogleFonts.poppins(
+                        textStyle: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                          height: 1.2,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Container(
-              child: InkWell(
-                onTap: () {},
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 12, right: 12, bottom: 12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset(
-                            "assets/images/pandapay.jpg",
-                            height: 20,
-                            width: 70,
-                          ),
-                          Container(
-                            height: 20,
-                            width: 50,
-                            decoration: BoxDecoration(
-                                color: primaryAccent[200],
-                                shape: BoxShape.rectangle,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Center(
-                              child: Text(
-                                "Rs. 0.00",
-                                style: GoogleFonts.poppins(
-                                  textStyle: const TextStyle(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w600,
-                                    color: myColour,
-                                    height: 1.2,
+              Container(
+                child: InkWell(
+                  onTap: () {},
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 12, right: 12, bottom: 12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              "assets/images/pandapay.jpg",
+                              height: 20,
+                              width: 70,
+                            ),
+                            Container(
+                              height: 20,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  color: primaryAccent[200],
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Center(
+                                child: Text(
+                                  "Rs. 0.00",
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.w600,
+                                      color: myColour,
+                                      height: 1.2,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Top up, check your balance and get exciting\noffers!",
-                        style: GoogleFonts.poppins(
-                          textStyle: const TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
-                            height: 1.2,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Divider(
-              color: Colors.blueGrey,
-              thickness: 0.1,
-            ),
-            drawerTile(
-                image: "assets/icons/pro.png",
-                text: "Become a pandapro",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/voucher.png",
-                text: "Vouchers & offers",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/heart(1).png",
-                text: "Favourites",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/order.png",
-                text: "Orders & reordering",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/user.png",
-                text: "View profile",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/location.png",
-                text: "Addresses",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/trophy.png",
-                text: "Panda rewards",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/question.png",
-                text: "Help center",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/building.png",
-                text: "Foodpanda for Business",
-                width: 20,
-                height: 20),
-            drawerTile(
-                image: "assets/icons/gift.png",
-                text: "Invite friends",
-                width: 20,
-                height: 20),
-            Divider(
-              color: Colors.blueGrey,
-              thickness: 0.1,
-            ),
-            textTile(text: "Settings"),
-            textTile(text: "Terms & Conditions / Privacy"),
-            textTile(text: "Log out")
-          ],
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: ConstrainedBox(
-          constraints:
-              BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 3),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(color: myColour[500]),
-                  height: 60,
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 14, right: 14, bottom: 14),
-                    child: InkWell(
-                      child: SearchField(),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(color: Colors.grey[200]),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 10),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            FoodDeliveryCard(),
-                            Column(
-                              children: [
-                                PandaMartCard(),
-                                OtherHomeCard(
-                                    heading: "Shops",
-                                    image: "assets/images/shirt.jpg",
-                                    text: "Top Brands to\nyour door")
-                              ],
                             )
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            OtherHomeCard(
-                                heading: "Pick-up",
-                                image: "assets/images/pickup.jpg",
-                                text: "Self-collect for\n50% off"),
-                            OtherHomeCard(
-                                heading: "Dine-in",
-                                image: "assets/images/plate.jpg",
-                                text: "Go out to eat\nfor 25% off"),
-                          ],
+                        const SizedBox(
+                          height: 5,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            OtherHomeCard(
-                                heading: "Catering",
-                                image: "assets/images/dessert.jpg",
-                                text: "Plan events\nwith ease"),
-                            OtherHomeCard(
-                                heading: "pandago",
-                                image: "assets/images/pandago.jpg",
-                                text: "Send parcels\nin a tap"),
-                          ],
-                        ),
+                        Text(
+                          "Top up, check your balance and get exciting\noffers!",
+                          style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black,
+                              height: 1.2,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
                 ),
-                HeadingsText(text: "Popular restaurants"),
-                SizedBox(
-                  height: 10,
-                ),
-                Expanded(
+              ),
+              const Divider(
+                color: Colors.blueGrey,
+                thickness: 0.1,
+              ),
+              drawerTile(
+                  image: "assets/icons/pro.png",
+                  text: "Become a pandapro",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/voucher.png",
+                  text: "Vouchers & offers",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/heart(1).png",
+                  text: "Favourites",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/order.png",
+                  text: "Orders & reordering",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/user.png",
+                  text: "View profile",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/location.png",
+                  text: "Addresses",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/trophy.png",
+                  text: "Panda rewards",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/question.png",
+                  text: "Help center",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/building.png",
+                  text: "Foodpanda for Business",
+                  width: 20,
+                  height: 20),
+              drawerTile(
+                  image: "assets/icons/gift.png",
+                  text: "Invite friends",
+                  width: 20,
+                  height: 20),
+              const Divider(
+                color: Colors.blueGrey,
+                thickness: 0.1,
+              ),
+              textTile(text: "Settings"),
+              textTile(text: "Terms & Conditions / Privacy"),
+              textTile(text: "Log out")
+            ],
+          ),
+        ),
+      ),
+      body: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height * 3),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(color: myColour[500]),
+                    height: 60,
                     child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 30,
-                    itemBuilder: ((context, index) {
-                      return RestaurantSlider();
-                    }),
-                  ),
-                )),
-                HeadingsText(text: "Cuisines"),
-                SizedBox(
-                  height: 10,
-                ),
-                Expanded(
-                  child: Padding(
-                      padding: const EdgeInsets.only(left: 6.0),
-                      child: CuisineList()),
-                ),
-                HeadingsText(text: "Popular shops"),
-                SizedBox(
-                  height: 10,
-                ),
-                Expanded(
-                  child: Padding(
-                      padding:
-                          const EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
-                      child: ShopsList()),
-                ),
-                HeadingsText(text: "Pick up at a restaurant near you"),
-                ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    Colors.black
-                        .withOpacity(0.4), // Adjust the opacity value as needed
-                    BlendMode.dstATop,
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/map.jpg"),
-                        fit: BoxFit.fitWidth,
+                      padding: const EdgeInsets.only(
+                          left: 14, right: 14, bottom: 14),
+                      child: InkWell(
+                        child: const SearchField(),
+                        onTap: () {},
                       ),
                     ),
-                    height: 200,
-                    width: MediaQuery.of(context).size.width,
                   ),
-                )
-              ]),
+                  Container(
+                    decoration: BoxDecoration(color: Colors.grey[200]),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const FoodDeliveryCard(),
+                              Column(
+                                children: [
+                                  const PandaMartCard(),
+                                  OtherHomeCard(
+                                      heading: "Shops",
+                                      image: "assets/images/shirt.jpg",
+                                      text: "Top Brands to\nyour door")
+                                ],
+                              )
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              OtherHomeCard(
+                                  heading: "Pick-up",
+                                  image: "assets/images/pickup.jpg",
+                                  text: "Self-collect for\n50% off"),
+                              OtherHomeCard(
+                                  heading: "Dine-in",
+                                  image: "assets/images/plate.jpg",
+                                  text: "Go out to eat\nfor 25% off"),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              OtherHomeCard(
+                                  heading: "Catering",
+                                  image: "assets/images/dessert.jpg",
+                                  text: "Plan events\nwith ease"),
+                              OtherHomeCard(
+                                  heading: "pandago",
+                                  image: "assets/images/pandago.jpg",
+                                  text: "Send parcels\nin a tap"),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  HeadingsText(text: "Popular restaurants"),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 30,
+                      itemBuilder: ((context, index) {
+                        return const RestaurantSlider();
+                      }),
+                    ),
+                  )),
+                  HeadingsText(text: "Cuisines"),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Expanded(
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 6.0),
+                        child: CuisineList()),
+                  ),
+                  HeadingsText(text: "Popular shops"),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Expanded(
+                    child: Padding(
+                        padding:
+                            EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
+                        child: ShopsList()),
+                  ),
+                  HeadingsText(text: "Pick up at a restaurant near you"),
+                  ColorFiltered(
+                    colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(
+                          0.4), // Adjust the opacity value as needed
+                      BlendMode.dstATop,
+                    ),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/map.jpg"),
+                          fit: BoxFit.fitWidth,
+                        ),
+                      ),
+                      height: 200,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  )
+                ]),
+          ),
         ),
       ),
     );
