@@ -9,6 +9,7 @@ import 'package:foodpanda_clone/pandaMartCard.dart';
 import 'package:foodpanda_clone/restaurantSlider.dart';
 import 'package:foodpanda_clone/searchField.dart';
 import 'package:foodpanda_clone/shopsList.dart';
+import 'package:foodpanda_clone/starRow.dart';
 import 'package:foodpanda_clone/textTile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:foodpanda_clone/colors.dart';
@@ -370,21 +371,125 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: ShopsList()),
                   ),
                   HeadingsText(text: "Pick up at a restaurant near you"),
-                  ColorFiltered(
-                    colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(
-                          0.4), // Adjust the opacity value as needed
-                      BlendMode.dstATop,
-                    ),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/map.jpg"),
-                          fit: BoxFit.fitWidth,
-                        ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        opacity: 0.5,
+                        image: AssetImage("assets/images/map.jpg"),
+                        fit: BoxFit.fitWidth,
                       ),
-                      height: 200,
-                      width: MediaQuery.of(context).size.width,
+                    ),
+                    height: 250,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 15,
+                      itemBuilder: ((context, index) {
+                        return Container(
+                          margin:
+                              EdgeInsets.only(left: 15, top: 35, bottom: 30),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                          ),
+                          height: 100,
+                          width: 260,
+                          child: InkWell(
+                            onTap: () {},
+                            borderRadius: BorderRadius.circular(10),
+                            child: Padding(
+                              padding: const EdgeInsets.all(6.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/images/chuckles.jpg",
+                                    height: 125,
+                                    width: 258,
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "CHUCKLES",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black,
+                                            height: 1.2,
+                                          ),
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      StarRow()
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 4,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "1.5km away . Pick up in 15 min",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.grey,
+                                            height: 1.2,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  HeadingsText(text: "Your daily deals"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 140,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 15,
+                      itemBuilder: ((context, index) {
+                        return Container(
+                          margin: EdgeInsets.only(left: 8, right: 8),
+                          child: InkWell(
+                            onTap: () {},
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/sambhal.jpg"),
+                                      fit: BoxFit.fitHeight)),
+                              height: 150,
+                              width: 100,
+                            ),
+                          ),
+                        );
+                      }),
                     ),
                   )
                 ]),
