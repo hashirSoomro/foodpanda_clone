@@ -45,7 +45,7 @@ class _CuisineListState extends State<CuisineList> {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: 7,
+      itemCount: 5,
       itemBuilder: ((context, index) {
         return Column(
           children: [

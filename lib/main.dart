@@ -9,6 +9,7 @@ import 'package:foodpanda_clone/pandaMartCard.dart';
 import 'package:foodpanda_clone/restaurantSlider.dart';
 import 'package:foodpanda_clone/searchField.dart';
 import 'package:foodpanda_clone/shopsList.dart';
+import 'package:foodpanda_clone/shopsSlide.dart';
 import 'package:foodpanda_clone/starRow.dart';
 import 'package:foodpanda_clone/textTile.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -491,7 +492,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       }),
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  HeadingsText(text: "Shops"),
+                  const Expanded(
+                    child: Padding(
+                        padding:
+                            EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
+                        child: ShopsSlide()),
+                  ),
                 ]),
           ),
         ),
