@@ -26,6 +26,7 @@ class _ShopsListState extends State<ShopsList> {
           child: Column(
             children: [
               Column(
+                  mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -52,7 +53,6 @@ class _ShopsListState extends State<ShopsList> {
                           fontSize: 10,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
-                          height: 1.2,
                         ),
                       ),
                       textAlign: TextAlign.center,
@@ -67,7 +67,6 @@ class _ShopsListState extends State<ShopsList> {
                           fontSize: 10,
                           fontWeight: FontWeight.w400,
                           color: Colors.grey,
-                          height: 1.2,
                         ),
                       ),
                       textAlign: TextAlign.center,

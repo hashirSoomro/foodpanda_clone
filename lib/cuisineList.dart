@@ -45,7 +45,7 @@ class _CuisineListState extends State<CuisineList> {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: 5,
+      itemCount: 7,
       itemBuilder: ((context, index) {
         return Column(
           children: [
@@ -85,7 +85,7 @@ class _CuisineListState extends State<CuisineList> {
                   ]),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             InkWell(
               onTap: () {},
@@ -122,9 +122,6 @@ class _CuisineListState extends State<CuisineList> {
                     ),
                   ]),
             ),
-            const SizedBox(
-              height: 20,
-            )
           ],
         );
       }),

@@ -6,6 +6,7 @@ import 'package:foodpanda_clone/drawerTile.dart';
 import 'package:foodpanda_clone/foodDeliveryCard.dart';
 import 'package:foodpanda_clone/otherHomeCard.dart';
 import 'package:foodpanda_clone/pandaMartCard.dart';
+import 'package:foodpanda_clone/pandamartList.dart';
 import 'package:foodpanda_clone/restaurantSlider.dart';
 import 'package:foodpanda_clone/searchField.dart';
 import 'package:foodpanda_clone/shopsList.dart';
@@ -269,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height * 3),
+                maxHeight: MediaQuery.of(context).size.height * 3.2),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -279,7 +280,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 60,
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          left: 14, right: 14, bottom: 14),
+                        left: 14,
+                        right: 14,
+                      ),
                       child: InkWell(
                         child: const SearchField(),
                         onTap: () {},
@@ -367,8 +370,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   const Expanded(
                     child: Padding(
-                        padding:
-                            EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
+                        padding: EdgeInsets.only(left: 2.0),
                         child: ShopsList()),
                   ),
                   HeadingsText(text: "Pick up at a restaurant near you"),
@@ -499,9 +501,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   HeadingsText(text: "Shops"),
                   const Expanded(
                     child: Padding(
-                        padding:
-                            EdgeInsets.only(top: 10, left: 2.0, bottom: 60),
+                        padding: EdgeInsets.only(top: 10, left: 2.0),
                         child: ShopsSlide()),
+                  ),
+                  HeadingsText(
+                    text: "Pandamart",
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  const Expanded(
+                    child: Padding(
+                        padding: EdgeInsets.only(top: 10, left: 2.0),
+                        child: pandamartSlide()),
                   ),
                 ]),
           ),
