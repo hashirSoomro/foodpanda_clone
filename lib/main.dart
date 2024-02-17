@@ -270,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height * 3.2),
+                maxHeight: MediaQuery.of(context).size.height * 3.3),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -515,6 +515,61 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.only(top: 10, left: 2.0),
                         child: pandamartSlide()),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      onTap: () {},
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 189, 189, 189),
+                            ),
+                            borderRadius: BorderRadius.circular(10)),
+                        padding: EdgeInsets.all(10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Become a pro",
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black,
+                                      height: 1.2,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Get 10 FREE deliveries",
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black,
+                                      height: 1.2,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Image.asset(
+                              "assets/images/pandapro.jpg",
+                              width: 65,
+                              height: 55,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
                 ]),
           ),
         ),
