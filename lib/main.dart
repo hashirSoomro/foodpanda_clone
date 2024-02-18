@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodpanda_clone/HeadingsText.dart';
+import 'package:foodpanda_clone/cart.dart';
 import 'package:foodpanda_clone/circleIcon.dart';
 import 'package:foodpanda_clone/cuisineList.dart';
 import 'package:foodpanda_clone/drawerTile.dart';
@@ -82,7 +83,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           CircleIcon(
             img: 'assets/icons/cart.png',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Cart()));
+            },
           )
         ],
         backgroundColor: myColour[500],
