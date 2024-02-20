@@ -84,8 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
           CircleIcon(
             img: 'assets/icons/cart.png',
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Cart()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Cart()));
             },
           )
         ],
@@ -378,13 +378,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: ShopsList()),
                   ),
                   HeadingsText(text: "Pick up at a restaurant near you"),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        opacity: 0.5,
+                        opacity: 0.6,
                         image: AssetImage("assets/images/map.jpg"),
                         fit: BoxFit.fitWidth,
                       ),
@@ -396,8 +396,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       itemCount: 15,
                       itemBuilder: ((context, index) {
                         return Container(
-                          margin:
-                              EdgeInsets.only(left: 15, top: 35, bottom: 30),
+                          margin: const EdgeInsets.only(
+                              left: 15, top: 35, bottom: 30),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -416,7 +416,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     height: 125,
                                     width: 258,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
                                   Row(
@@ -434,8 +434,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                           ),
                                         ),
                                       ),
-                                      Spacer(),
-                                      StarRow()
+                                      const Spacer(),
+                                      const StarRow()
                                     ],
                                   ),
                                   const SizedBox(
@@ -465,14 +465,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   HeadingsText(text: "Your daily deals"),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     height: 140,
                     width: MediaQuery.of(context).size.width,
                     child: ListView.builder(
@@ -480,14 +480,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       itemCount: 15,
                       itemBuilder: ((context, index) {
                         return Container(
-                          margin: EdgeInsets.only(left: 8, right: 8),
+                          margin: const EdgeInsets.only(left: 8, right: 8),
                           child: InkWell(
                             onTap: () {},
                             borderRadius: BorderRadius.circular(10),
                             child: Container(
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  image: DecorationImage(
+                                  image: const DecorationImage(
                                       image: AssetImage(
                                           "assets/images/sambhal.jpg"),
                                       fit: BoxFit.fitHeight)),
@@ -499,7 +499,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   HeadingsText(text: "Shops"),
@@ -511,7 +511,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   HeadingsText(
                     text: "Pandamart",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Expanded(
@@ -530,7 +530,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: const Color.fromARGB(255, 189, 189, 189),
                             ),
                             borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -548,7 +548,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
                                 Text(

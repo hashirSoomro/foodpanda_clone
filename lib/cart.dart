@@ -18,7 +18,7 @@ class _CartState extends State<Cart> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.close),
+          icon: const Icon(Icons.close),
           color: myColour,
         ),
         title: Text(
@@ -33,7 +33,7 @@ class _CartState extends State<Cart> {
           ),
         ),
       ),
-      body: Column(
+      body: const Column(
         children: [Divider()],
       ),
     );

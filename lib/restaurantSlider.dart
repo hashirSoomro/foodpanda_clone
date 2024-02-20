@@ -58,7 +58,7 @@ class _RestaurantSliderState extends State<RestaurantSlider> {
                         ),
                       ),
                       const Spacer(),
-                      StarRow()
+                      const StarRow()
                     ],
                   ),
                   const SizedBox(
